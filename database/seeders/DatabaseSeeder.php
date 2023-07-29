@@ -15,25 +15,36 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $user1=\App\Models\User::create([
-            'name'=>'SiThu',
-            'email'=>'sithu@laravel.com',
-            'password'=>'sithu123',
-           ]);
-           $user2=\App\Models\User::create([
-            'name'=>'MoeMoe',
-            'email'=>'moe@laravel.com',
-            'password'=>'moe123',
-           ]);
+        // $user1=\App\Models\User::create([
+        //     'name'=>'SiThu',
+        //     'email'=>'sithu@laravel.com',
+        //     'password'=>'sithu123',
+        //    ]);
+        //    $user2=\App\Models\User::create([
+        //     'name'=>'MoeMoe',
+        //     'email'=>'moe@laravel.com',
+        //     'password'=>'moe123',
+        //    ]);
     
-           Post::create([
-            'user_id'=>$user1->id,
-            'content'=>"I am laravel beginner",
-           ]);
+        //    Post::create([
+        //     'user_id'=>$user1->id,
+        //     'content'=>"I am laravel beginner",
+        //    ]);
 
-           Post::create([
-            'user_id'=>$user2->id,
-            'content'=>"I am Laravel developer",
-           ]);
+        //    Post::create([
+        //     'user_id'=>$user2->id,
+        //     'content'=>"I am Laravel developer",
+        //    ]);
+
+        \App\Models\User::create([
+            'name'=>'Helena Nora',
+            'email'=>'helenanora@laravel.com',
+            'password'=>Hash::make('nora123')
+        ]);
+        \App\Models\User::create([
+            'name'=>'James',
+            'email'=>'james@laravel.com',
+            'password'=>Hash::make('passcode')
+        ]);
     }
 }

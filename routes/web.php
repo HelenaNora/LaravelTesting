@@ -34,3 +34,13 @@ Route::post('/create','PostController@store');
 Route::get('/create','PostController@create');
 
 Route::get('/','PostController@list');
+
+
+
+Route::get('/dashboard','DashboardController')->middleware('auth');
+
+Route::get('/logout','AuthController@logout');
+
+Route::post('/login','AuthController@login');
+
+Route::get('/','AuthController@show')->name('login');
