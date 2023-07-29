@@ -2,7 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\Post;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,24 +15,25 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-    //    $user1=\App\Models\User::create([
-    //     'name'=>'Helena',
-    //     'email'=>'helena@laravel.com',
-    //     'password'=>'asdasdasd'
-    //    ]);
-    //    $user2=\App\Models\User::create([
-    //     'name'=>'Nora',
-    //     'email'=>'nora@laravel.com',
-    //     'password'=>'asdasdasd',
-    //    ]);
+        $user1=\App\Models\User::create([
+            'name'=>'SiThu',
+            'email'=>'sithu@laravel.com',
+            'password'=>'sithu123',
+           ]);
+           $user2=\App\Models\User::create([
+            'name'=>'MoeMoe',
+            'email'=>'moe@laravel.com',
+            'password'=>'moe123',
+           ]);
+    
+           Post::create([
+            'user_id'=>$user1->id,
+            'content'=>"I am laravel beginner",
+           ]);
 
-    //    Post::create([
-    //     'user_id'=>$user1->id,
-    //     'content'=>'I have been working at Laravel beginner',
-    //    ]);
-    //    Post::create([
-    //     'user_id'=>$user2->id,
-    //     'content'=>'I am start learning laravel.I like it! ',
-    //    ]);
+           Post::create([
+            'user_id'=>$user2->id,
+            'content'=>"I am Laravel developer",
+           ]);
     }
 }
