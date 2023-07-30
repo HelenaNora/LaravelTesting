@@ -26,6 +26,11 @@
             <label for="password" class="block">Password:</label>
             <input type="password" id="password" name="password" class="border border-gray-300 p-1">
         </div>
+        <div class="mb-5">
+            <label for="remember" class="block">
+                <input type="checkbox" name="rember" id="remember"/>Remember Me 
+            </label>
+        </div>
         <button type="submit" class="rounded bg-blue-800 text-white px-4 py-2">Login</button>
     </form>
 </body>
