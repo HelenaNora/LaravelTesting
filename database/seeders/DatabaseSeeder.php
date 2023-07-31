@@ -36,15 +36,25 @@ class DatabaseSeeder extends Seeder
         //     'content'=>"I am Laravel developer",
         //    ]);
 
+        // \App\Models\User::create([
+        //     'name'=>'Helena Nora',
+        //     'email'=>'helenanora@laravel.com',
+        //     'password'=>Hash::make('nora123')
+        // ]);
+        // \App\Models\User::create([
+        //     'name'=>'James',
+        //     'email'=>'james@laravel.com',
+        //     'password'=>Hash::make('passcode')
+        // ]);
         \App\Models\User::create([
-            'name'=>'Helena Nora',
-            'email'=>'helenanora@laravel.com',
-            'password'=>Hash::make('nora123')
+            'name'=>'Helena',
+            'email'=>'helena@laravel.com',
+            'password'=>Hash::make('helena123')
         ]);
         \App\Models\User::create([
-            'name'=>'James',
-            'email'=>'james@laravel.com',
-            'password'=>Hash::make('passcode')
+            'name'=>'Smith',
+            'email'=>'smith@laravel.com',
+            'password'=>Hash::make('smith123')
         ]);
     }
 }

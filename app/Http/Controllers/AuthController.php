@@ -6,6 +6,7 @@ use App\Models\Post;
 use App\Models\User;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 
 
@@ -13,9 +14,9 @@ use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
-    // public function show(){
-    //     return view('welcome');
-    // }
+    public function show(){
+        return view('welcome');
+    }
     public function login(){
         validator(request()->all(),[
             'email'=>['required','email'],
@@ -41,7 +42,7 @@ class AuthController extends Controller
         // auth()->logout();
         // return redirect('/');
 
-        auth()->user()->currentAccessToken()->delete();
+        // auth()->user()->currentAccessToken()->delete();
     }
     
 };
